@@ -48,9 +48,9 @@ public class Ave extends Animal{
         Ave.halcones++;
         return new Ave(name, age, "montanas", gender, "cafe glorioso");
     }
-
+    
     public static Ave crearAguila(String name, int age, String gender) {
     	Ave.aguilas++;
-        return new Ave(name, age, "montanas", gender, "blanco y amarillo");
-    }
+    	return new Ave(name, age, "montanas", gender, "blanco y amarillo");
+    }
 }
