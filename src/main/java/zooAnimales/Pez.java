@@ -1,21 +1,18 @@
 package zooAnimales;
 import java.util.ArrayList;
 
-public class Pez extends Animal{
-
+public class Pez extends Animal {
 	public static int salmones;
-	
-	public static int bacalaos;
-    private final static ArrayList<Pez> 
-    listado = new ArrayList<>();
+    public static int bacalaos;
+    private final static ArrayList<Pez> listado = new ArrayList<>();
 
     private String colorEscamas;
     private int cantidadAletas;
 
-    public Pez(String name, int age, String habitat, String gender, String skin, int fins) {
-        super(name, age, habitat, gender);
-        this.colorEscamas = skin;
-        this.cantidadAletas = fins;
+    public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {
+        super(nombre, edad, habitat, genero);
+        this.colorEscamas = colorEscamas;
+        this.cantidadAletas = cantidadAletas;
         listado.add(this);
     }
 
@@ -32,16 +29,16 @@ public class Pez extends Animal{
         return "nadar";
     }
 
-    public static Pez crearSalmon(String name, int age, String gender) {
+    public static Pez crearSalmon(String nombre, int edad, String genero) {
         salmones++;
-        Pez salmon = new Pez(name, age, "oceano", gender, "rojo", 6);
+        Pez salmon = new Pez(nombre, edad, "oceano", genero, "rojo", 6);
         listado.add(salmon);
         return salmon;
     }
 
-    public static Pez crearBacalao(String name, int age, String gender) {
+    public static Pez crearBacalao(String nombre, int edad, String genero) {
         bacalaos++;
-        Pez bacalao = new Pez(name, age, "oceano", gender, "gris", 6);
+        Pez bacalao = new Pez(nombre, edad, "oceano", genero, "gris", 6);
         listado.add(bacalao);
         return bacalao;
     }
